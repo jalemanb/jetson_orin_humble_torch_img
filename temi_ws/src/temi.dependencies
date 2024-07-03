@@ -1,0 +1,29 @@
+repositories:
+  temi:
+    type: git
+    url: git@github.com:jalemanb/temi.git
+    version: main
+  utils/BT/BehaviorTree.CPP:
+    type: git
+    url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
+    version: master
+  utils/BT/BehaviorTree.ROS2:
+    type: git
+    url: https://github.com/BehaviorTree/BehaviorTree.ROS2.git
+    version: humble
+  utils/rosbridge_suite:
+    type: git
+    url: https://github.com/RobotWebTools/rosbridge_suite.git
+    version: ros2
+  utils/rws:
+    type: git
+    url: https://github.com/v-kiniv/rws.git
+    version: humble
+  vizanti:
+    type: git
+    url: https://github.com/MoffKalast/vizanti.git
+    version: ros2
+  websocketpp_ros2:
+    type: git
+    url: git@github.com:jalemanb/websocketpp_ros2.git
+    version: main
