@@ -21,8 +21,8 @@ repositories:
     version: humble
   vizanti:
     type: git
-    url: https://github.com/MoffKalast/vizanti.git
-    version: ros2
+    url: git@github.com:jalemanb/vizanti.git
+    version: temi
   websocketpp_ros2:
     type: git
     url: git@github.com:jalemanb/websocketpp_ros2.git
