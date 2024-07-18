@@ -8,3 +8,4 @@ yolov8_ros
 log
 install
 build
+image_transport_plugins

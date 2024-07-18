@@ -57,6 +57,16 @@ RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
  && rosdep install --from-paths src/websocketpp_ros2 --ignore-src -y \
  && colcon build --symlink-install --packages-select websocketpp_ros2
 
+# Ultralytics with YOLO object detectors
+RUN pip install ultralytics
+
+# Installing multiple image transport capabilities to improve img visualization
+COPY ./temi_ws/src/image_transport_plugins /temi_ws/src/image_transport_plugins
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
+ && source /temi_ws/install/setup.bash \ 
+ && apt-get update -y \
+ && colcon build --symlink-install --packages-select theora_image_transport image_transport_plugins compressed_image_transport compressed_depth_image_transport
+
 # ROS2 Wrapper for yolo v8 detection
 COPY ./temi_ws/src/yolov8_ros /temi_ws/src/yolov8_ros
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
